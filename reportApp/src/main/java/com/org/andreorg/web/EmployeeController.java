@@ -23,7 +23,12 @@ public class EmployeeController extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		int empId = Integer.parseInt(request.getParameter("empId"));
-	
+
+		EmployeeDao empDao = new EmployeeDao();
+		Employee emp = empDao.getEmployeeByID(empId);
+			
+		request.setAttribute("employee", emp);
+		
 		RequestDispatcher rd = request.getRequestDispatcher("showEmployee.jsp");
 		rd.forward(request, response);
 		
