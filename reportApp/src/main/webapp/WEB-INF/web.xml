@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>EmployeeController</servlet-name>
+  	<display-name>EmployeeController</display-name>
+  	<description></description>
+  	<servlet-class>com.org.andreorg.web.EmployeeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EmployeeController</servlet-name>
+  	<url-pattern>/getEmployee</url-pattern>
+  </servlet-mapping>
 </web-app>
