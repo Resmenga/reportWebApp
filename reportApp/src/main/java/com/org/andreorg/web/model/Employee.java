@@ -14,7 +14,7 @@ import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @DynamicUpdate
-@Table(name = "dbo.Employee")
+@Table(name = "Employee")
 public class Employee {
 
 	@Id
